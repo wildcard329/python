@@ -2,12 +2,17 @@ import random
 min = 1
 max = 6
 
-roll = "yes"
+def getRollAgain():
+	rollStr = input("Roll again? ")
+	if rollStr.lower() == "yes" or rollStr.lower() == "y":
+		return True
+	else:
+		return False
 
-while roll == "yes" or roll == "y":
+roll = True
+while roll == True:
 	print("Rolling the die...")
 	print("The value is...")
 	print(random.randint(min,max))
 	print(random.randint(min,max))
-	roll = input("Roll again? ")
-	
+	roll = getRollAgain()
