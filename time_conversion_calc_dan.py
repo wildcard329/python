@@ -18,13 +18,10 @@ class Time:
     def __str__(self):
         return str(self.days) + ' days ' + str(self.hours) + ' hours ' + str(self.minutes) + ' minutes ' + str(self.seconds) + ' seconds'
 
-
-time = Time(200);
-
 if len(sys.argv) > 1:
     seconds = sys.argv[1]
 else:
     seconds = input("Enter time in seconds:")
-seconds = int(seconds)
 
+seconds = int(seconds)
 print(Time(seconds))
