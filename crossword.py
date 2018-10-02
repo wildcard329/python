@@ -1,4 +1,4 @@
-word = "Test word."
+word = "horrifiction silver screen addiction"
 
 def changeHiddenWord(hiddenWord, word, letter):
     newHiddenWord = ""
