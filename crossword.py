@@ -13,7 +13,7 @@ def hideWord(word):
     hiddenWord = ""
     for c in word:
         if c.isalpha():
-            hiddenWord += '_'
+            hiddenWord += '-'
         else:
             hiddenWord += c
     return hiddenWord
