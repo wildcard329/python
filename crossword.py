@@ -30,4 +30,10 @@ def startGame(word):
         print(hiddenWord)
 
 
-startGame(word)
+while True:
+    word = random.choice(wordList)
+    play = input("Would you like to play hangman? ")
+    if play == 'yes' or play == 'y':
+        startGame(word)
+    elif play == 'no' or play == 'n':
+        break
