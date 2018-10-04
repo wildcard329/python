@@ -1,5 +1,25 @@
 import random
-wordList = ["alien invasion", "Temple of Doom", "Bermuda Triangle", "howling", "knocking", "bump in the night", "hockey mask", "full moon"]
+
+wordList = [
+    "alien invasion", 
+    "Temple of Doom", 
+    "Bermuda Triangle", 
+    "howling", 
+    "knocking",
+    "bump in the night", 
+    "hockey mask", 
+    "full moon"
+]
+index = 0
+random.shuffle(wordList)
+
+def moveIndex(wordList, index):
+    if index == len(wordList) - 1:
+        index = 0
+    else:
+        index += 1
+    return index
+
 
 def changeHiddenWord(hiddenWord, word, letter):
     newHiddenWord = ""
@@ -30,9 +50,10 @@ def startGame(word):
 
 
 while True:
-    word = random.choice(wordList)
     play = input("Would you like to play hangman? ")
     if play == 'yes' or play == 'y':
+        word = wordList[index]
+        index = moveIndex(wordList, index)
         startGame(word)
     elif play == 'no' or play == 'n':
         break
