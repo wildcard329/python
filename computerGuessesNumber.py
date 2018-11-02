@@ -1,13 +1,13 @@
 import random
 
-player = input(What is your name? ')
+player = input('What is your name? ')
 
 print('Welcome',player,'''\b! Today instead of you guessing my number, 
 I will guess yours. I have ten turns to guess your number,
 I win if I guess it and you win if I can\'t guess your number
 in ten turns. Please be honest in your feedback.
 
-Please select a number between 1 and 100.''')
+Please select a number between 1 and 100, but don't tell me what it is, I will guess it.''')
 
 min = 1
 max = 100
