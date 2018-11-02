@@ -1,6 +1,8 @@
 import random
 
-print('''Welcome player! Today instead of you guessing my number, 
+player = input(What is your name? ')
+
+print('Welcome',player,'''\b! Today instead of you guessing my number, 
 I will guess yours. I have ten turns to guess your number,
 I win if I guess it and you win if I can\'t guess your number
 in ten turns. Please be honest in your feedback.
@@ -26,7 +28,7 @@ while feedback != 'c' and counter < 10:
   feedback = input('[h]igher, [l]ower, or [c]orrect? ')
   
 if feedback == 'c':
-  print('Yay!!! I won!!! Good Game.')
+  print('Yay!!! I won!!! Good Game,',player,'\b!')
   
 if counter == 10:
-  print('Oh, darn. I ran out of guesses. You win, player!')
+  print('Oh, darn. I ran out of guesses. You win,',player,'\b!')
