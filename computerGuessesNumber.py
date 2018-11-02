@@ -15,7 +15,7 @@ guess = random.randint(min, max)
 print('I am guessing the number is ', guess)
 
 feedback = input('[h]igher, [l]ower, or [c]orrect? ')
-while feedback != 'c':
+while feedback != 'c' and counter < 10:
   if feedback == 'h':
     min = guess + 1
   elif feedback == 'l':
@@ -24,8 +24,6 @@ while feedback != 'c':
   guess = random.randint(min, max)
   print(guess)
   feedback = input('[h]igher, [l]ower, or [c]orrect? ')
-  if counter == 10:
-    break
   
 if feedback == 'c':
   print('Yay!!! I won!!! Good Game.')
